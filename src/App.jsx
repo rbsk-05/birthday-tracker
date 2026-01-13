@@ -1,4 +1,7 @@
 import './App.css'
+import birthdays from './birthdays';
+import BirthdayCard from './components/BirthdayCard';
+import {getAge, getDate, getDay, getBirthDate, getBirthMonth} from './utils/date';
 
 function App() {
   return (
@@ -13,34 +16,19 @@ function App() {
         <h3>Upcoming BirthDays</h3>
 
         <div className="Birthday-card-div">
-            <div className='Birthday-card'>
-              <div className="Birthday-card-header">
-                <span className='Birthday-tag'>Friend</span>
-                <span className='Birthday-days'>10 days</span>
-              </div>
-
-              <div className='Birthday-content-div'>
-                <img className="Birthday-img" src="darshan.jpg" />
-              <p className="Birthday-name">DARSHAN M</p>
-              <p className="Birthday-date">MAY 18, WED</p>
-              <p className="Birthday-age">AGE: 21</p>
-              </div>
-            </div>
-
-            <div className='Birthday-card'>
-              <div className="Birthday-card-header">
-                <span className='Birthday-tag'>Friend</span>
-                <span className='Birthday-days'>10 days</span>
-              </div>
-
-              <div className='Birthday-content-div'>
-                <img className="Birthday-img" src="darshan.jpg" />
-              <p className="Birthday-name">DARSHAN M</p>
-              <p className="Birthday-date">MAY 18, WED</p>
-              <p className="Birthday-age">AGE: 21</p>
-              </div>
-            </div>
-
+          {
+            birthdays.map(birthday => (
+              <BirthdayCard 
+                key = {birthday.id}
+                birthday = {birthday}
+                age = {getAge(birthday.dob)}
+                daysLeft={getDate(birthday.dob)}
+                day = {getDay(birthday.dob)}
+                birthdate = {getBirthDate(birthday.dob)}
+                birthmonth={getBirthMonth(birthday.dob)}
+              />
+            ))
+          }
         </div>
 
 

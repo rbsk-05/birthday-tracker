@@ -1,0 +1,67 @@
+function getBirthDate(dob){
+  const birthDate = new Date(dob);
+  return birthDate.getDate();
+}
+
+function getBirthMonth(dob){
+  const birthDate = new Date(dob);
+  
+  const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Sep", "Aug", "Sep", "Oct", "Nov", "Dec"];
+
+  return months[birthDate.getMonth()]; //INDEXING
+}
+
+function getAge(dob){
+  const birthDate = new Date(dob); //CHANGES OUR DATA INTO IST
+  const today = new Date() // GETS CURRENT IST DATA
+  
+  let age = today.getFullYear() - birthDate.getFullYear(); //CALCULATES AGE
+
+  //IF BDAY NOT HAPPEND YET, SUBTRACT 1 FROM AGE
+  if (birthDate.getMonth() > today.getMonth() || (
+      birthDate.getMonth() === today.getMonth() &&
+      birthDate.getDate() > today.getDate()))
+      {
+      age --;
+      }
+  return age
+}
+
+function getDate(dob){
+  const birthDate = new Date(dob);
+  const today = new Date();
+
+  //CALCULATING NEXT BDAY USING DAY, MONTH / YEAR IS CURRENT YEAR
+  let nextBirthdate = new Date(
+    today.getFullYear(), 
+    birthDate.getMonth(), birthDate.getDate()
+  );
+
+
+  //IF HER BDAY IS JAN 1 2026, TDY IS JAN 13 2026 => SET IT TO JAN 1 2027
+  if (nextBirthdate < today){
+    nextBirthdate.setFullYear(today.getFullYear() + 1)
+  }
+
+  const daysLeftMS = nextBirthdate - today; //DATA IS STORED IN ms(milliseconds)
+  const daysLeft = Math.ceil(daysLeftMS/(1000 * 60 * 60 * 24)); //CONVERT ms => DAYS
+  return daysLeft;
+  
+}
+
+
+function getDay(dob){
+  const birthDate = new Date(dob);
+  const today = new Date();
+
+  const bdate = birthDate.getDate()
+  const bmonth = birthDate.getMonth()
+
+  let temp = new Date(today.getFullYear(),bmonth, bdate);
+  
+  const day = ["Sun", "Mon", "Tue", "Wed", "Thurs", "Fri", "Sat"]
+
+  return day[temp.getDay()]
+}
+
+export {getAge, getDate, getDay, getBirthDate, getBirthMonth}
