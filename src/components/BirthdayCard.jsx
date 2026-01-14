@@ -5,7 +5,7 @@ function BirthdayCard ({birthday, age, daysLeft, day, birthdate, birthmonth}) {
     <div className='Birthday-card'>
         <div className="Birthday-card-header">
           <span className='Birthday-tag'>{birthday.tag}</span>
-          <span className='Birthday-days'>{daysLeft}</span>
+          <span className='Birthday-days'>{daysLeft} days</span>
         </div>
 
         <div className='Birthday-content-div'>

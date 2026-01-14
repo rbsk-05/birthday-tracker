@@ -6,7 +6,7 @@ function getBirthDate(dob){
 function getBirthMonth(dob){
   const birthDate = new Date(dob);
   
-  const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Sep", "Aug", "Sep", "Oct", "Nov", "Dec"];
+  const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
   return months[birthDate.getMonth()]; //INDEXING
 }
