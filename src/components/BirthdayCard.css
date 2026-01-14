@@ -9,18 +9,6 @@
   flex-direction: column;
 }
 
-.Birthday-days.red{
-  background-color: red;
-}
-
-.Birthday-days.yellow{
-  background-color: yellow;
-}
-
-.Birthday-days.green{
-  background-color: lightgreen;
-}
-
 .Birthday-card-header{
   display: flex;
   justify-content: space-between;
@@ -39,6 +27,18 @@
 
 .Birthday-days{
   background-color: rgb(255, 107, 107);
+}
+
+.Birthday-days.red{
+  background-color: red;
+}
+
+.Birthday-days.yellow{
+  background-color: yellow;
+}
+
+.Birthday-days.green{
+  background-color: lightgreen;
 }
 
 .Birthday-content-div{

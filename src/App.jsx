@@ -1,6 +1,7 @@
 import './App.css'
 import birthdays from './birthdays';
 import BirthdayCard from './components/BirthdayCard';
+import RecentCard from './components/RecentCard';
 import {getAge, getDate, getDay, getBirthDate, getBirthMonth} from './utils/date';
 
 function App() {
@@ -43,6 +44,15 @@ function App() {
 
       <div className="Recent-div">
         <h3>Recent Birthdays</h3>
+
+        <div className='Recent-card-div'>
+          {/* STATIC CODE */}
+          <RecentCard />
+          <RecentCard />
+          <RecentCard />
+          <RecentCard />
+        </div>
+
       </div>
     </div>
     </>
