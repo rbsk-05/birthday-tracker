@@ -64,4 +64,10 @@ function getDay(dob){
   return day[temp.getDay()]
 }
 
-export {getAge, getDate, getDay, getBirthDate, getBirthMonth}
+function getDayColor(daysLeft){
+  if (daysLeft < 7) return "red"
+  else if (daysLeft < 31) return "yellow"
+  else return "green"
+}
+
+export {getAge, getDate, getDay, getBirthDate, getBirthMonth, getDayColor}

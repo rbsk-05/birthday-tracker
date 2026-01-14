@@ -1,11 +1,15 @@
 import './BirthdayCard.css'
+import { getDayColor} from '../utils/date';
 
 function BirthdayCard ({birthday, age, daysLeft, day, birthdate, birthmonth}) {
+
+  const dayColor = getDayColor(daysLeft);
+
   return (
-    <div className='Birthday-card'>
+    <div className="Birthday-card">
         <div className="Birthday-card-header">
           <span className='Birthday-tag'>{birthday.tag}</span>
-          <span className='Birthday-days'>{daysLeft} days</span>
+          <span className={`Birthday-days ${dayColor}`}>{daysLeft} {daysLeft === 1 ? "day" : "days"}</span>
         </div>
 
         <div className='Birthday-content-div'>

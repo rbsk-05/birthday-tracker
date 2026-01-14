@@ -4,6 +4,13 @@ import BirthdayCard from './components/BirthdayCard';
 import {getAge, getDate, getDay, getBirthDate, getBirthMonth} from './utils/date';
 
 function App() {
+
+  //Use spread operator to create a new array
+  //Sort based on upcoming b-days
+  const upcomingBirthdays = [...birthdays].sort(
+    (a,b) => getDate(a.dob) - getDate(b.dob)
+  );
+
   return (
     <>
     <div className="App-header">
@@ -17,7 +24,7 @@ function App() {
 
         <div className="Birthday-card-div">
           {
-            birthdays.map(birthday => (
+            upcomingBirthdays.map(birthday => (
               <BirthdayCard 
                 key = {birthday.id}
                 birthday = {birthday}

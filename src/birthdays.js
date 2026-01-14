@@ -26,6 +26,20 @@ const birthdays = [
     dob : "Oct 18 1976",
     tag : "Friend",
     image : "darshan.jpg"
+  },
+  {
+    id : 5,
+    name : "Darshan M",
+    dob : "Jan 15 2005",
+    tag : "Friend",
+    image: "darshan.jpg"
+  },
+  {
+    id : 6,
+    name : "Darshan M",
+    dob : "Feb 13 2005",
+    tag : "Friend",
+    image: "darshan.jpg"
   }
 ];
 

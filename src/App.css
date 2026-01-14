@@ -18,6 +18,7 @@
 
 .Upcoming-div{
   background-color: bisque;
+  flex: 3;
 }
 
 .Upcoming-div h3{
@@ -26,15 +27,19 @@
 }
 
 .Birthday-card-div{
+  padding-top: 20px;
+  padding-bottom: 20px;
   background-color: rgb(255, 219, 231);
   display: flex;
   align-items: center;
-  justify-content: space-between;
   flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 .Recent-div{
   background-color: aquamarine;
+  flex: 1;
 }
 
 .Recent-div h3{
