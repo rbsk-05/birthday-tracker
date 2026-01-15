@@ -1,12 +1,23 @@
 .Birthday-card{
-  background-color: beige;
+  background-color: #fffaf0; /*beige*/
+  /* background-color: rgba(255, 234, 115, 0.979); */
   height: 300px;
   width: 300px;
   margin: 0px 20px;
-  border-radius: 5px;
+  border-radius: 15px;
+
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.5); /* X-axis : Y-axis: Spread Shadow: Color*/
+
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 
   display: flex;
   flex-direction: column;
+}
+
+.Birthday-card:hover{
+  cursor: pointer;
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0px 10px 10px rgba(0,0,0,1);
 }
 
 .Birthday-card-header{
@@ -17,24 +28,24 @@
 
 .Birthday-card-header span{
   font-size: 20px;
-  padding: 4px;
+  padding: 5px;
   border-radius: 5px;
 }
 
 .Birthday-tag{
-  background-color: rgb(255, 255, 147);
+  background-color: #DDA0DD;
 }
 
 .Birthday-days{
-  background-color: rgb(255, 107, 107);
+  background-color: #ff6347;
 }
 
 .Birthday-days.red{
-  background-color: red;
+  background-color: #ff6347;
 }
 
 .Birthday-days.yellow{
-  background-color: yellow;
+  background-color: #FFC72C;
 }
 
 .Birthday-days.green{
@@ -49,6 +60,7 @@
 }
 
 .Birthday-img{
+  object-fit: cover;
   width: 100px;
   height: 100px;
   border-radius: 50%;
@@ -56,6 +68,7 @@
 }
 
 .Birthday-name{
+  letter-spacing: 0.5px;
   font-size: 30px;
   margin-top: 0px;
   margin-bottom: 10px;
@@ -64,12 +77,13 @@
 .Birthday-date{
   margin: 0px;
   margin-bottom: 10px;
-  font-size: 20px;
+  font-size: 22px;
 }
 
 .Birthday-age{
+  color: #555;
   margin: 0px;
   font-size: 20px;
   font-weight: 300;
-  margin-top: 30px;
+  margin-top: 25px;
 }

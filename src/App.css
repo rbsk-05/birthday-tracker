@@ -2,47 +2,48 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: aqua;
+  background-color:  #fffaf0;
+  padding: 10px;
+  border-bottom: 2px solid rgba(0,0,0,0.15);
+  box-shadow: 0px 4px 6px rgba(0,0,0,0.2);
 }
 
 .App-header h1{
   margin: 0px;
   font-size: 50px;
+  letter-spacing: 1px;
 }
 
 .App-content{
-  background-color: grey;
   display: flex;
   justify-content: space-between;
 }
 
 .Upcoming-div{
-  background-color: bisque;
   flex: 3;
 }
 
 .Upcoming-div h3{
   font-size: 35px;
   margin: 20px;
+  margin-top: 30px;
 }
 
 .Birthday-card-div{
-  padding-top: 20px;
-  padding-bottom: 20px;
-  background-color: rgb(255, 219, 231);
+  margin-bottom: 50px;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 25px;
 }
 
 .Recent-div{
-  background-color: aquamarine;
   flex: 1;
 }
 
 .Recent-div h3{
   font-size: 35px;
   margin: 20px;
+  margin-top: 30px;
 }
