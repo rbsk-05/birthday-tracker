@@ -27,9 +27,11 @@ function getAge(dob){
   return age
 }
 
-function getDate(dob){
+function getDaysLeft(dob){
   const birthDate = new Date(dob);
   const today = new Date();
+
+  today.setHours(0, 0, 0, 0); //Otherwise day is already passed - Edge case noticed if Today is B'Day
 
   //CALCULATING NEXT BDAY USING DAY, MONTH / YEAR IS CURRENT YEAR
   let nextBirthdate = new Date(
@@ -70,4 +72,26 @@ function getDayColor(daysLeft){
   else return "green"
 }
 
-export {getAge, getDate, getDay, getBirthDate, getBirthMonth, getDayColor}
+function getDaysAgo(dob){
+  const today = new Date();
+  const birthDate = new Date(dob);
+
+  today.setHours(0, 0, 0, 0);
+  
+  const lastBirthDay = new Date(
+    today.getFullYear(),
+    birthDate.getMonth(),
+    birthDate.getDate()
+  );
+
+  if (lastBirthDay > today) {
+    lastBirthDay.setFullYear(today.getFullYear() - 1);
+  }
+
+  const daysAgoMs = today - lastBirthDay;
+  const daysAgo = Math.floor(daysAgoMs / (1000 * 60 * 60 *24));
+
+  return daysAgo; 
+}
+
+export {getAge, getDaysLeft, getDay, getBirthDate, getBirthMonth, getDayColor, getDaysAgo}
