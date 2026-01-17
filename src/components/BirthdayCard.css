@@ -36,6 +36,21 @@
   background-color: #DDA0DD;
 }
 
+.Birthday-tag.friend{
+  background-color: #d6c0ff;
+  color: #4b2f8a;
+}
+
+.Birthday-tag.college{
+  background-color: #d6e9ff;
+  color: #2f5d8a;
+}
+
+.Birthday-tag.family{
+  background-color: #ffd0fb;
+  color: #8a2f6a;
+}
+
 .Birthday-days{
   background-color: #ff6347;
 }

@@ -1,8 +1,8 @@
 .Recent-card{
   background-color: #fffaf0; /*beige*/
   /* background-color: rgba(255, 234, 115, 0.979); */
-  height: 200px;
-  width: 300px;
+  height: 190px;
+  width: 350px;
   margin: 0px 20px;
   border-radius: 15px;
   margin-bottom: 20px;
@@ -44,6 +44,7 @@
   margin: 0px;
   font-size: 30px;
   letter-spacing: 0.5px;
+
 }
 
 .Birthday-date-recent{
@@ -63,5 +64,5 @@
   color: #555;
   font-size: 20px;
   font-weight: 300;
-  margin-top: 20px;
+  margin-top: 10px;
 }

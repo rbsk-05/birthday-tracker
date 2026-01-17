@@ -112,13 +112,6 @@ const birthdays = [
     image: "ara.jpg"
   },
   {
-    id : 16,
-    name : "Akshay Kumar S",
-    dob : "Jun 23 2006",
-    tag : "College",
-    image: "akshay.jpg"
-  },
-  {
     id : 17,
     name : "Bharath Kumar S",
     dob : "Oct 10 2005",
@@ -170,7 +163,7 @@ const birthdays = [
   {
     id : 24,
     name : "Shanjiv Krishna",
-    dob : "July 12 2005",
+    dob : "Aug 23 2005",
     tag : "Friend",
     image: "shanjiv.jpg"
   },
@@ -222,6 +215,20 @@ const birthdays = [
     dob : "Jun 19 2006",
     tag : "College",
     image: "gian.jpg"
+  },
+  {
+    id : 32,
+    name : "Akshay Kumar S",
+    dob : "Jun 23 2006",
+    tag : "College",
+    image: "akshay.jpg"
+  },
+  {
+    id : 33,
+    name : "Pranav ML",
+    dob : "Sep 20 2005",
+    tag : "Friend",
+    image: "pranav.jpg"
   }
 ];
 

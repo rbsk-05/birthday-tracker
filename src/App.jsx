@@ -3,8 +3,15 @@ import birthdays from './birthdays';
 import BirthdayCard from './components/BirthdayCard';
 import RecentCard from './components/RecentCard';
 import {getAge, getDay, getBirthDate, getBirthMonth, getDaysAgo, getDaysLeft} from './utils/date';
+import {useState} from "react";
 
 function App() {
+
+  const[isRecentOpen, setIsRecentOpen] = useState(false);
+
+  const toggleRecent = () => {
+    setIsRecentOpen(prev => !prev)
+  };
 
   //Use spread operator to create a new array
   //Sort based on upcoming b-days
@@ -43,11 +50,13 @@ function App() {
             ))
           }
         </div>
-
-
       </div>
 
-      <div className="Recent-div">
+      <div className="recent-toggle" onClick={toggleRecent}>
+        <span>{isRecentOpen ? ">" : "<"}</span>
+      </div>
+
+      <div className={`Recent-div ${isRecentOpen ? "open" : ""}`}>
         <h3>Recent Birthdays</h3>
 
         <div className='Recent-card-div'>

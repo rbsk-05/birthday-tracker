@@ -4,11 +4,11 @@ function RecentCard({birthday, age, day, birthdate, birthmonth, daysAgo}){
   return (
     <div className='Recent-card'>
       <div className='Birthday-card-header'>
-        <span className='Birthday-tag'>{birthday.tag}</span>
+        <span className={`Birthday-tag ${birthday.tag === "Family" ? "family" : birthday.tag === "Friend" ? "friend" : "college"}`}>{birthday.tag}</span>
         <span className='Birthday-days'>{daysAgo} {daysAgo <= 1 ? "day ago" : "days ago"}</span>
       </div>
       <div className='Recent-card-content'>
-        <img src="darshan.jpg"/>
+        <img src={birthday.image}/>
         <div>
           <p className='Birthday-name-recent'>{birthday.name}</p>
           <p className='Birthday-date-recent'>{birthmonth} {birthdate}, {day}</p>

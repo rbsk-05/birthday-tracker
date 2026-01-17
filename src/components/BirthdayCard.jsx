@@ -8,7 +8,7 @@ function BirthdayCard ({birthday, age, daysLeft, day, birthdate, birthmonth}) {
   return (
     <div className="Birthday-card">
         <div className="Birthday-card-header">
-          <span className='Birthday-tag'>{birthday.tag}</span>
+          <span className={`Birthday-tag ${birthday.tag === "Family" ? "family" : birthday.tag === "Friend" ? "friend" : "college"}`}>{birthday.tag}</span>
           <span className={`Birthday-days ${dayColor}`}>{daysLeft === 0 ? "Today!" : `${daysLeft} ${daysLeft === 1 ? "day" : "days"}`}</span>
         </div>
 
