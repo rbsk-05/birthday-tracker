@@ -8,6 +8,7 @@ import {useState} from "react";
 function App() {
 
   const[isRecentOpen, setIsRecentOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
 
   const toggleRecent = () => {
     setIsRecentOpen(prev => !prev)
@@ -15,7 +16,12 @@ function App() {
 
   //Use spread operator to create a new array
   //Sort based on upcoming b-days
-  const upcomingBirthdays = [...birthdays].sort(
+
+  const filteredBirthdays = birthdays.filter(birthday => 
+    birthday.name.toLowerCase().includes(searchQuery.toLowerCase())
+  )
+
+  const upcomingBirthdays = [...filteredBirthdays].sort(
     (a,b) => getDaysLeft(a.dob) - getDaysLeft(b.dob)
   );
 
@@ -33,7 +39,17 @@ function App() {
     <div className="App-content">
 
       <div className="Upcoming-div">
-        <h3>Upcoming BirthDays</h3>
+        <div className='Upcoming-header'>
+          <h3>Upcoming BirthDays</h3>
+
+          <input 
+            type="text"
+            placeholder="Search..."
+            value = {searchQuery}
+            onChange= {(e) => setSearchQuery(e.target.value)}
+            className="Search-bar-input"
+          />
+        </div>
 
         <div className="Birthday-card-div">
           {

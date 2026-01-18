@@ -23,10 +23,32 @@
   flex: 3;
 }
 
-.Upcoming-div h3{
-  font-size: 35px;
+.Upcoming-header{
+  display: flex;
+  align-items: center;
   margin: 20px;
   margin-top: 30px;
+  gap: 50px;
+}
+
+.Upcoming-div h3{
+  font-size: 35px;
+  margin: 0px;
+  display: inline-block;
+}
+
+.Search-bar-input{
+  font-family: "Londrina Solid", Arial;
+  letter-spacing: 1px;
+  font-size: 20px;
+  margin: 0px;
+  height: 30px;
+  width: 300px;
+  padding-left: 20px;
+  border-radius: 10px;
+  outline: none;
+  background-color: #fffaf0;
+
 }
 
 .Birthday-card-div{
@@ -53,7 +75,6 @@
   z-index: 1;
 }
 
-
 .Recent-div{
   position: fixed;
   top: 1;
@@ -67,7 +88,6 @@
   transform: translateX(100%);
   transition: transform 0.3s ease;
 }
-
 
 .Recent-div.open{
   transform: translateX(0);
