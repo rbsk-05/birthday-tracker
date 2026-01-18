@@ -1,16 +1,8 @@
-# React + Vite
+BirthDay Tracker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+It all started when my friend started calling me out when I couldnt remember her birthday. It was not just her birthday, I tend to forget most of my friend's birthday. They maybe relatively close friends, but i am bad at dates or even when I do remember, I wont have the slightest idea that it was that day which I missed. Of Course, I remember other birthdays but the majority lies on the other side of the fence.
 
-Currently, two official plugins are available:
+So I saw this problem of mine and decided to develop a solution on my own, At first, I used to write down some names down in my Notes or my calendar. but I tend to miss it still. This is where my BIRTHDAY TRACKER comes in.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Now I can easily know my friend's birthday and even have a look at the recent ones I missed, all properly categorized and ready to not miss a birthday starting this year!
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
